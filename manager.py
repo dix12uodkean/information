@@ -11,19 +11,5 @@ Migrate(app, db)
 manager.add_command('db', MigrateCommand)
 
 
-@app.route('/', methods=['GET', 'POST'])
-def index():
-
-    # # 测试redis是否可以跑通
-    # redis_store.set('name', 'zhangsan')
-    #
-    # name = redis_store.get('name')
-    #
-    # print(name)
-
-    # session['name'] = 'banzhang'
-    return 'hello'
-
-
 if __name__ == '__main__':
     manager.run()
